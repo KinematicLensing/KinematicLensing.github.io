@@ -1,0 +1,23 @@
+---
+layout: default
+title: News
+slug: news
+kicker: Updates
+lede: Papers, milestones and meetings from the team.
+permalink: /news/
+---
+<section class="section">
+  <div class="wrap" style="max-width:900px">
+    <ul class="news-list">
+      {% for item in site.data.news %}
+      <li>
+        <time datetime="{{ item.date }}">{{ item.date | date: "%B %Y" }}</time>
+        <div>
+          <h3>{% if item.link %}<a href="{{ item.link }}">{{ item.title }}</a>{% else %}{{ item.title }}{% endif %}</h3>
+          <p>{{ item.text }}</p>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

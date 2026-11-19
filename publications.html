@@ -1,0 +1,41 @@
+---
+layout: default
+title: Publications
+slug: publications
+kicker: Papers
+lede: Kinematic lensing papers by team members, from the original proposal of the method to forecasts and measurements for Roman and beyond.
+permalink: /publications/
+---
+{% assign all_tags = "" | split: "" %}
+{% for p in site.data.publications %}{% for t in p.tags %}{% assign all_tags = all_tags | push: t %}{% endfor %}{% endfor %}
+{% assign all_tags = all_tags | uniq | sort %}
+<section class="section">
+  <div class="wrap" style="max-width:900px">
+    <div class="pub-filters" role="group" aria-label="Filter by topic">
+      <button class="chip" data-tag="all" aria-pressed="true">All</button>
+      {% for t in all_tags %}<button class="chip" data-tag="{{ t | slugify }}" aria-pressed="false">{{ t }}</button>{% endfor %}
+    </div>
+
+    {% assign by_year = site.data.publications | group_by: "year" %}
+    {% for y in by_year %}
+    <h2 class="pub-year">{{ y.name }}</h2>
+    <div class="pub-group">
+      {% for pub in y.items %}
+      {% capture tagslugs %}{% for t in pub.tags %}{{ t | slugify }} {% endfor %}{% endcapture %}
+      <article class="pub" data-tags="{{ tagslugs | strip }}">
+        <h3>{{ pub.title }}</h3>
+        <p class="authors">{{ pub.authors }}</p>
+        <p class="venue">{{ pub.journal | default: "preprint" }}</p>
+        {% if pub.highlight %}<p class="highlight">{{ pub.highlight }}</p>{% endif %}
+        <div class="pub-links">
+          {% if pub.arxiv %}<a href="https://arxiv.org/abs/{{ pub.arxiv }}">arXiv:{{ pub.arxiv }}</a>{% endif %}
+          {% if pub.doi %}<a href="https://doi.org/{{ pub.doi }}">DOI</a>{% endif %}
+          {% if pub.arxiv %}<a href="https://ui.adsabs.harvard.edu/abs/arXiv:{{ pub.arxiv }}">ADS</a>{% endif %}
+          {% for t in pub.tags %}<span class="tag">{{ t }}</span>{% endfor %}
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+    {% endfor %}
+  </div>
+</section>

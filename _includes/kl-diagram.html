@@ -1,0 +1,44 @@
+{%- comment -%}
+  Schematic of kinematic lensing: an inclined rotating disk seen in imaging
+  (elliptical isophotes) and in its velocity field (blue/red = approaching/receding).
+  Without shear the kinematic major and minor axes are perpendicular and
+  aligned with the photometric axes; shear makes them misaligned.
+  Pass include.sheared=true for the sheared panel; include.id must be unique.
+{%- endcomment -%}
+{%- assign sid = include.id | default: 'kl' -%}
+<svg class="kl-diagram{% if include.animate %} is-animated{% endif %}" viewBox="0 0 320 320" role="img" aria-labelledby="{{ sid }}-t">
+  <title id="{{ sid }}-t">{% if include.sheared %}Sheared disk: kinematic axes are no longer perpendicular{% else %}Unsheared disk: kinematic and photometric axes are aligned and perpendicular{% endif %}</title>
+  <defs>
+    <linearGradient id="{{ sid }}-vel" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#4f8dff"/>
+      <stop offset=".42" stop-color="#9fc0ff"/>
+      <stop offset=".5" stop-color="#f1ece4"/>
+      <stop offset=".58" stop-color="#ffb08a"/>
+      <stop offset="1" stop-color="#ff5a4e"/>
+    </linearGradient>
+    <radialGradient id="{{ sid }}-glow" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#fff" stop-opacity=".55"/>
+      <stop offset=".35" stop-color="#fff" stop-opacity=".12"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <g class="kl-disk" transform="translate(160 160){% if include.sheared %} matrix(1 0.22 0.22 1 0 0){% endif %}">
+    <g transform="rotate(-25)">
+      <ellipse rx="128" ry="54" fill="url(#{{ sid }}-vel)" opacity=".9"/>
+      <ellipse rx="128" ry="54" fill="url(#{{ sid }}-glow)"/>
+      <ellipse rx="96" ry="40" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="1"/>
+      <ellipse rx="62" ry="26" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="1"/>
+      <ellipse rx="30" ry="12.5" fill="none" stroke="#fff" stroke-opacity=".45" stroke-width="1"/>
+      <!-- kinematic axes (velocity field) -->
+      <line class="ax-kin" x1="-140" y1="0" x2="140" y2="0"/>
+      <line class="ax-kin ax-minor" x1="0" y1="-66" x2="0" y2="66"/>
+    </g>
+  </g>
+  {% if include.sheared %}
+  <!-- photometric axes of the observed (sheared) ellipse: perpendicular by construction -->
+  <g transform="translate(160 160) rotate(-7.9)">
+    <line class="ax-phot" x1="-150" y1="0" x2="150" y2="0"/>
+    <line class="ax-phot" x1="0" y1="-70" x2="0" y2="70"/>
+  </g>
+  {% endif %}
+</svg>

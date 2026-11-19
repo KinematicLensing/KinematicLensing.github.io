@@ -1,0 +1,62 @@
+# Publications, newest first. Fields:
+#   title, authors, year, journal (optional), arxiv (id), doi (optional),
+#   highlight (optional short sentence), tags (optional list)
+
+- title: "Multiprobe strategies for Kinematic Lensing with the Roman Space Telescope High Latitude Wide Area Survey"
+  authors: "Y.-H. Huang, J. Xu, T. Eifler, E. Krause, S. Everett, F. Hervas-Peters, Pranjal R. S., E. Huff, Y. X. Lai"
+  year: 2026
+  journal: "submitted"
+  arxiv: "2611.03497"
+  highlight: "KL alone roughly doubles the dark-energy figure of merit of standard weak lensing for the HLWAS Medium Tier; the planned roll angles are near-optimal for KL."
+  tags: [Roman, forecast, multiprobe]
+
+- title: "Kinematic Lensing Inference II: Cluster Lensing with O(1) Galaxies"
+  authors: "Pranjal R. S., E. Huff, E. Krause, T. Eifler, S. Everett, et al."
+  year: 2025
+  journal: "MNRAS 540, 2877"
+  arxiv: "2409.08367"
+  doi: "10.1093/mnras/staf845"
+  highlight: "First detection of a cluster lensing signal with KL (Abell 2261) — from just three source galaxies."
+  tags: [measurement, pipeline]
+
+- title: "Kinematic Lensing with the Dark Energy Spectroscopic Instrument — Probing structure formation at very low redshift"
+  authors: "J. Xu, T. Eifler, E. Wang, E. Krause, S. Everett, E. Huff, Pranjal R. S., Y.-H. Huang"
+  year: 2024
+  journal: "preprint"
+  arxiv: "2407.20867"
+  tags: [DESI, forecast]
+
+- title: "Astrophysical systematics in kinematic lensing: Quantifying an intrinsic alignment analog"
+  authors: "Y.-H. Huang, E. Krause, J. Xu, T. Eifler, Pranjal R. S., E. Huff"
+  year: 2024
+  journal: "Phys. Rev. D 110, 043509"
+  arxiv: "2404.00197"
+  doi: "10.1103/PhysRevD.110.043509"
+  highlight: "First study of the Tully–Fisher environmental dependence as a systematic for KL."
+  tags: [systematics]
+
+- title: "Kinematic Lensing Inference I: Characterizing Shape Noise with Simulated Analyses"
+  authors: "Pranjal R. S., E. Krause, E. Huff, T. Eifler, et al."
+  year: 2023
+  journal: "MNRAS"
+  arxiv: "2209.11811"
+  doi: "10.1093/mnras/stad2014"
+  highlight: "Forward-modeling inference pipeline; KL shape noise of ~0.02–0.04, an order of magnitude below standard weak lensing."
+  tags: [pipeline, simulations]
+
+- title: "Kinematic Lensing with the Roman Space Telescope"
+  authors: "J. Xu, T. Eifler, E. Huff, Pranjal R. S., H.-J. Huang, S. Everett, E. Krause"
+  year: 2023
+  journal: "MNRAS 519, 2535"
+  arxiv: "2201.00739"
+  doi: "10.1093/mnras/stac3685"
+  highlight: "Roman KL forecast: a 3.65× improvement in figure of merit over Roman weak lensing, with a galaxy sample more than 10× smaller."
+  tags: [Roman, forecast]
+
+- title: "Kinematic Lensing — Cosmic Shear Without Shape Noise"
+  authors: "E. M. Huff, E. Krause, T. Eifler, X. Fang, M. R. George, D. Schlegel"
+  year: 2013
+  journal: "preprint"
+  arxiv: "1311.1489"
+  highlight: "The paper that proposed kinematic lensing."
+  tags: [foundational]

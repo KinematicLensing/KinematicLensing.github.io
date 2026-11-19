@@ -1,0 +1,60 @@
+---
+layout: default
+title: The Science
+slug: science
+kicker: Kinematic lensing
+lede: Kinematic lensing (KL) combines imaging and resolved spectroscopy of disk galaxies to measure gravitational shear galaxy by galaxy — sidestepping the shape noise and intrinsic alignments that limit standard weak lensing.
+permalink: /science/
+---
+
+<section class="section">
+<div class="wrap prose">
+<h2>The problem: shape noise</h2>
+<p>Weak gravitational lensing by the large-scale structure of the Universe stretches the images of distant galaxies by about one percent. But galaxies are not intrinsically round: their shapes scatter by σ<sub>ε</sub> ≈ 0.26 per component. For any single galaxy the lensing signal is buried — a per-galaxy signal-to-noise of roughly 0.01 — so standard weak lensing must average over enormous numbers of mostly faint galaxies. Those faint galaxies are also where shape measurement, photometric redshifts and intrinsic alignments are hardest to control.</p>
+<h2>The idea: let the galaxy tell us its true shape</h2>
+<p>A rotating, inclined disk galaxy looks elliptical in an image. Its <strong>velocity field</strong> carries extra information: without lensing, the kinematic major axis (where rotation is fastest along the line of sight) and the kinematic minor axis (zero line-of-sight rotation) are perpendicular and line up with the axes of the image.</p>
+<p>Shear transforms the image and the velocity field differently. The photometric ellipse simply becomes another ellipse, so its original orientation is lost — but the kinematic axes are no longer perpendicular, and they are misaligned with the photometric axes. Combining both, together with the Tully–Fisher relation as a prior on rotation speed, pins down the galaxy’s intrinsic shape and lets us measure the shear for each individual galaxy (Huff et al. 2013).</p>
+</div>
+
+<div class="wrap">
+  <div class="figure-pair">
+    <figure>
+      {% include kl-diagram.html id="unsheared" %}
+      <figcaption><strong>Unsheared</strong>Kinematic axes are perpendicular and aligned with the image.</figcaption>
+    </figure>
+    <figure>
+      {% include kl-diagram.html id="sheared" sheared=true %}
+      <figcaption><strong>Sheared</strong>Kinematic axes are no longer perpendicular, and are offset from the photometric axes.</figcaption>
+    </figure>
+  </div>
+  <div class="legend">
+    <span><i class="swatch vel"></i>Line-of-sight velocity (approaching → receding)</span>
+    <span><i class="swatch"></i>Kinematic major axis</span>
+    <span><i class="swatch dash"></i>Kinematic minor axis</span>
+    <span><i class="swatch phot"></i>Photometric axes of the observed image</span>
+  </div>
+  <p style="color:var(--muted);font-size:.85rem;margin-top:-1rem">Schematic only; the shear is exaggerated for visibility.</p>
+</div>
+
+<div class="wrap prose">
+<h2>Why Roman</h2>
+<p>The Nancy Grace Roman Space Telescope will deliver exactly the two ingredients KL needs over thousands of square degrees: sharp, space-based near-infrared imaging, and slitless grism spectroscopy that resolves the emission-line velocity fields of disk galaxies. KL turns these two datasets into a new kind of lensing measurement.</p>
+<ul>
+<li><strong>Order-of-magnitude lower shape noise.</strong> Simulated analyses show KL shape noise of σ<sub>ε</sub> ≈ 0.02–0.04 (Pranjal R. S. et al. 2023).</li>
+<li><strong>Robust galaxy sample.</strong> KL uses bright, large disk galaxies with spectroscopic redshifts, avoiding many systematics of faint-galaxy shape catalogs.</li>
+<li><strong>Intrinsic alignments largely bypassed.</strong> Because each galaxy’s intrinsic orientation is inferred, KL avoids one of weak lensing’s most severe astrophysical systematics. We have quantified the main remaining analog — environmental dependence of the Tully–Fisher relation (Huang et al. 2024).</li>
+<li><strong>More dark-energy information.</strong> Xu et al. (2023) forecast a 3.65× improvement in figure of merit over Roman weak lensing, despite a KL sample more than ten times smaller. For the current High Latitude Wide Area Survey design, KL alone more than doubles the weak-lensing figure of merit, and a multiprobe analysis with galaxy clustering and galaxy–galaxy lensing raises it further (Huang et al. 2026).</li>
+<li><strong>Survey design matters.</strong> Measuring velocity fields from slitless spectra benefits from multiple dispersion directions; the planned four-pass roll angles are close to optimal for KL.</li>
+</ul>
+<h2>Proof of concept on real data</h2>
+<p>KL has already been demonstrated on data. Using Keck spectroscopy and Subaru imaging, our team measured the lensing signal of the galaxy cluster Abell 2261 from just three background disk galaxies, with error bars comparable to standard weak lensing using tens to about a hundred galaxies (Pranjal R. S. et al. 2025). Ongoing work applies KL to JWST grism data, DESI spectroscopy and new observations with MMT/Binospec.</p>
+<h2>What the team is building</h2>
+<ol>
+<li><strong>Simulations</strong> of Roman grism observations of rotating disk galaxies with realistic morphologies.</li>
+<li><strong>A Roman KL shear-inference pipeline</strong> that produces a KL shape catalog from Roman imaging and spectroscopy.</li>
+<li><strong>Cosmological inference software</strong> based on CosmoLike, including multiprobe combinations and systematics modeling.</li>
+<li><strong>Forecasts</strong> that inform Roman survey strategy and systematics requirements.</li>
+</ol>
+<p>See our <a href="{{ '/publications/' | relative_url }}">publications</a> and <a href="{{ '/software/' | relative_url }}">software</a> for details.</p>
+</div>
+</section>

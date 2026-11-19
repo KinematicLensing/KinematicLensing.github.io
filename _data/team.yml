@@ -1,0 +1,52 @@
+# Team roster. Seeded from public author lists of the team's KL papers.
+# Please review: confirm roles and affiliations, add missing members,
+# and optionally add a photo (put the image in assets/img/team/ and set
+# `photo: /assets/img/team/filename.jpg`) and a personal `website`.
+#
+# Fields: name, role, affiliation, website (optional), photo (optional), group
+# group is one of: pi, faculty, researchers, students, collaborators
+
+- name: Elisabeth Krause
+  role: Principal Investigator
+  affiliation: University of Arizona
+  group: pi
+
+- name: Tim Eifler
+  role: Co-Investigator
+  affiliation: University of Arizona
+  group: faculty
+
+- name: Eric Huff
+  role: Co-Investigator
+  affiliation: NASA Jet Propulsion Laboratory
+  group: faculty
+
+- name: Spencer Everett
+  role: Team member
+  affiliation: ""
+  group: researchers
+
+- name: Jiachuan Xu
+  role: Team member
+  affiliation: University of Arizona
+  group: researchers
+
+- name: Pranjal R. S.
+  role: Team member
+  affiliation: University of Arizona
+  group: researchers
+
+- name: Yu-Hsiu Huang
+  role: Team member
+  affiliation: University of Arizona
+  group: students
+
+- name: Fabian Hervas-Peters
+  role: Team member
+  affiliation: ""
+  group: researchers
+
+- name: Yan Xiang Lai
+  role: Team member
+  affiliation: ""
+  group: students

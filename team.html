@@ -1,0 +1,48 @@
+---
+layout: default
+title: Team
+slug: team
+kicker: People
+lede: The Kinematic Lensing Roman Wide-Field Science Team brings together researchers in weak lensing, galaxy kinematics, simulations and cosmological inference.
+permalink: /team/
+---
+{% assign groups = "pi|Principal Investigator,faculty|Co-Investigators,researchers|Researchers,students|Graduate Students,collaborators|Collaborators" | split: "," %}
+<section class="section">
+  <div class="wrap">
+    {% for g in groups %}
+      {% assign parts = g | split: "|" %}
+      {% assign key = parts[0] %}
+      {% assign members = site.data.team | where: "group", key %}
+      {% if members.size > 0 %}
+      <div class="team-group">
+        <h2>{{ parts[1] }}</h2>
+        <div class="people">
+          {% for m in members %}
+          <div class="person">
+            {% if m.photo %}
+              <img class="avatar" src="{{ m.photo | relative_url }}" alt="" width="56" height="56">
+            {% else %}
+              {% assign words = m.name | split: " " %}
+              <span class="avatar" aria-hidden="true">{{ words.first | slice: 0 }}{{ words.last | slice: 0 }}</span>
+            {% endif %}
+            <div>
+              <h3>{% if m.website %}<a href="{{ m.website }}">{{ m.name }}</a>{% else %}{{ m.name }}{% endif %}</h3>
+              {% if m.role %}<div class="role">{{ m.role }}</div>{% endif %}
+              {% if m.affiliation and m.affiliation != "" %}<div class="aff">{{ m.affiliation }}</div>{% endif %}
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+    {% endfor %}
+
+    <div class="cta" style="margin-top:3rem">
+      <div>
+        <h2>Interested in kinematic lensing?</h2>
+        <p>We welcome collaborators working on galaxy kinematics, slitless spectroscopy, simulations and weak lensing. Reach out to any team member, or open an issue on GitHub.</p>
+      </div>
+      <a class="btn btn-primary" href="https://github.com/{{ site.github_org }}">KinematicLensing on GitHub</a>
+    </div>
+  </div>
+</section>

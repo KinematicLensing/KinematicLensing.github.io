@@ -1,0 +1,21 @@
+# News items, newest first. `date` is YYYY-MM-DD; `link` is optional.
+
+- date: 2026-11-02
+  title: "New paper: multiprobe KL strategies for the Roman HLWAS"
+  text: "Huang et al. forecast KL for the High Latitude Wide Area Survey Medium Tier, combining KL with galaxy clustering and galaxy–galaxy lensing."
+  link: https://arxiv.org/abs/2611.03497
+
+- date: 2024-09-12
+  title: "First cluster lensing detection with kinematic lensing"
+  text: "KL Inference II measures the lensing signal of Abell 2261 using Keck spectroscopy and Subaru imaging of three background disk galaxies."
+  link: https://arxiv.org/abs/2409.08367
+
+- date: 2024-08-01
+  title: "Intrinsic-alignment analog for KL published in Phys. Rev. D"
+  text: "Huang et al. quantify how environmental dependence of the Tully–Fisher relation could affect KL cosmology."
+  link: https://doi.org/10.1103/PhysRevD.110.043509
+
+- date: 2023-10-10
+  title: "NASA selects the Kinematic Lensing Wide-Field Science Team"
+  text: "The team, led by Elisabeth Krause at the University of Arizona, is selected as a Roman Wide-Field Science Team (Large)."
+  link: https://news.arizona.edu/story/uarizona-researchers-are-part-nasas-next-astrophysics-mission

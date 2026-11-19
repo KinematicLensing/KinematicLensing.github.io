@@ -1,0 +1,41 @@
+---
+layout: default
+title: Software
+slug: software
+kicker: Code
+lede: Tools for kinematic lensing modeling, simulation and inference, developed in the KinematicLensing GitHub organization.
+permalink: /software/
+---
+<section class="section">
+  <div class="wrap">
+    <h2>Active projects</h2>
+    <div class="cards">
+      {% for r in site.data.software %}{% if r.status == "active" %}
+      <a class="card" href="https://github.com/{{ r.repo }}">
+        <div class="repo-head"><h3>{{ r.name }}</h3><span class="badge active">active</span></div>
+        <p>{{ r.description }}</p>
+        <div class="repo-meta">{% if r.language != "" %}<span class="lang">{{ r.language }}</span>{% endif %}<span>{{ r.repo }}</span></div>
+      </a>
+      {% endif %}{% endfor %}
+    </div>
+
+    <h2 style="margin-top:3rem">Archived</h2>
+    <div class="cards">
+      {% for r in site.data.software %}{% if r.status == "archived" %}
+      <a class="card" href="https://github.com/{{ r.repo }}">
+        <div class="repo-head"><h3>{{ r.name }}</h3><span class="badge">archived</span></div>
+        <p>{{ r.description }}</p>
+        <div class="repo-meta">{% if r.language != "" %}<span class="lang">{{ r.language }}</span>{% endif %}</div>
+      </a>
+      {% endif %}{% endfor %}
+    </div>
+
+    <div class="cta" style="margin-top:3rem">
+      <div>
+        <h2>All repositories</h2>
+        <p>See the full list, issues and discussions on GitHub.</p>
+      </div>
+      <a class="btn btn-primary" href="https://github.com/orgs/{{ site.github_org }}/repositories">github.com/{{ site.github_org }}</a>
+    </div>
+  </div>
+</section>

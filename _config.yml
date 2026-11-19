@@ -1,0 +1,46 @@
+# Site settings for https://kinematiclensing.github.io
+# This repository must be named "KinematicLensing.github.io" inside the
+# KinematicLensing GitHub organization for it to be served at the org root.
+
+title: Kinematic Lensing with the Roman Space Telescope
+short_title: Roman KL
+description: >-
+  NASA Roman Wide-Field Science Team developing kinematic lensing — a weak
+  lensing technique that combines Roman imaging and slitless spectroscopy to
+  measure cosmic shear galaxy by galaxy.
+url: "https://kinematiclensing.github.io"
+baseurl: ""
+github_org: KinematicLensing
+contact_email: ""   # optional: add a team contact address to show it in the footer
+
+lang: en
+timezone: America/Phoenix
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  math_engine: null
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Main navigation (order shown in the header)
+nav:
+  - title: Science
+    url: /science/
+  - title: Team
+    url: /team/
+  - title: Publications
+    url: /publications/
+  - title: Software
+    url: /software/
+  - title: News
+    url: /news/
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - preview

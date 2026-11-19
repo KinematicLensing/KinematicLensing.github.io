@@ -1,0 +1,50 @@
+# Software listed on the Software page. Repos live in the KinematicLensing org.
+# status: active | archived
+
+- name: kl_roman_pipe
+  repo: KinematicLensing/kl_roman_pipe
+  description: "Assembles KL modeling and simulation tools for archival measurements and future Roman pipeline production."
+  language: Python
+  status: active
+
+- name: kl-tools
+  repo: KinematicLensing/kl-tools
+  description: "Kinematic Lensing toolkit (fork of sweverett/kl-tools)."
+  language: Jupyter Notebook
+  status: active
+
+- name: kl-nn
+  repo: KinematicLensing/kl-nn
+  description: "Neural-network tools for accelerating KL analyses."
+  language: Jupyter Notebook
+  status: active
+
+- name: JWST_KL_workflow
+  repo: KinematicLensing/JWST_KL_workflow
+  description: "Documented workflow for KL measurements on JWST grism and imaging data."
+  language: ""
+  status: active
+
+- name: gal_decomp_paper
+  repo: KinematicLensing/gal_decomp_paper
+  description: "Code for a dynamical galaxy decomposition paper (fork of McWilliamsCenter/gal_decomp_paper)."
+  language: Jupyter Notebook
+  status: active
+
+- name: TNGcube
+  repo: KinematicLensing/TNGcube
+  description: "Mock spectrum generator from IllustrisTNG simulations."
+  language: Jupyter Notebook
+  status: archived
+
+- name: BinnedFit
+  repo: KinematicLensing/BinnedFit
+  description: "Kinematic lensing modeling."
+  language: Jupyter Notebook
+  status: archived
+
+- name: notes
+  repo: KinematicLensing/notes
+  description: "Working notes."
+  language: Jupyter Notebook
+  status: archived
