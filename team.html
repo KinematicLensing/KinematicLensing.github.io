@@ -6,7 +6,7 @@ kicker: People
 lede: The Kinematic Lensing Roman Wide-Field Science Team brings together researchers in weak lensing, galaxy kinematics, simulations and cosmological inference.
 permalink: /team/
 ---
-{% assign groups = "pi|Principal Investigator,faculty|Co-Investigators,researchers|Researchers,students|Graduate Students,collaborators|Collaborators" | split: "," %}
+{% assign groups = "senior|Senior Investigators,researchers|Researchers,students|Graduate Students,collaborators|Collaborators" | split: "," %}
 <section class="section">
   <div class="wrap">
     {% for g in groups %}
@@ -29,6 +29,7 @@ permalink: /team/
               <h3>{% if m.website %}<a href="{{ m.website }}">{{ m.name }}</a>{% else %}{{ m.name }}{% endif %}</h3>
               {% if m.role %}<div class="role">{{ m.role }}</div>{% endif %}
               {% if m.affiliation and m.affiliation != "" %}<div class="aff">{{ m.affiliation }}</div>{% endif %}
+              {% if m.advisor %}<div class="aff">Advisor: {{ m.advisor }}</div>{% endif %}
             </div>
           </div>
           {% endfor %}

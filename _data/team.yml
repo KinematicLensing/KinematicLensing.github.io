@@ -1,45 +1,46 @@
 # Team roster.
 # Fields: name, role, affiliation, website (optional), photo (optional), group
-# group is one of: pi, faculty, researchers, students, collaborators
+# group is one of: senior, researchers, students, collaborators
+# advisor (optional): shown under graduate students who are advised outside the team
 # Photos: put a square image in assets/img/team/ and set `photo: /assets/img/team/filename.jpg`
 
 - name: Elisabeth Krause
   role: Principal Investigator
   affiliation: University of Arizona
-  group: pi
+  group: senior
 
 - name: Tim Eifler
   role: Co-Investigator
   affiliation: University of Arizona
-  group: faculty
+  group: senior
 
 - name: Eric Huff
   role: Co-Investigator
   affiliation: NASA Jet Propulsion Laboratory
-  group: faculty
+  group: senior
 
 - name: Spencer Everett
-  role: Researcher
+  role: Staff Scientist
   affiliation: Caltech
   group: researchers
 
 - name: Pranjal R. S.
-  role: Researcher
+  role: Postdoc
   affiliation: NASA Jet Propulsion Laboratory
   group: researchers
 
 - name: Jiachuan Xu
-  role: Researcher
-  affiliation: University of Arizona
+  role: Postdoc
+  affiliation: Northeastern University
   group: researchers
 
 - name: Fabian Hervas-Peters
-  role: Researcher
+  role: Postdoc
   affiliation: University of Arizona
   group: researchers
 
 - name: Yan Xiang Lai
-  role: Researcher
+  role: Postdoc
   affiliation: University of Arizona
   group: researchers
 
@@ -61,4 +62,16 @@
 - name: Lauren Willett
   role: Graduate Student
   affiliation: University of Arizona
+  group: students
+
+- name: Eason Wang
+  role: Graduate Student
+  affiliation: Carnegie Mellon University
+  advisor: Rachel Mandelbaum
+  group: students
+
+- name: Vic Lloyd
+  role: Graduate Student
+  affiliation: Stony Brook University
+  advisor: Vivian Miranda
   group: students
