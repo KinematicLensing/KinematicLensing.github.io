@@ -5,6 +5,11 @@
   text: "Huang et al. forecast KL for the High Latitude Wide Area Survey Medium Tier, combining KL with galaxy clustering and galaxy–galaxy lensing."
   link: https://arxiv.org/abs/2611.03497
 
+- date: 2025-10-20
+  title: "New paper: cosmic shear with one component"
+  text: "Huang et al. introduce a one-component kinematic lensing estimator that needs less observing effort, with forecasts for future radio and spectroscopic surveys. Now published in Phys. Rev. D."
+  link: https://arxiv.org/abs/2510.18011
+
 - date: 2024-09-12
   title: "First cluster lensing detection with kinematic lensing"
   text: "KL Inference II measures the lensing signal of Abell 2261 using Keck spectroscopy and Subaru imaging of three background disk galaxies."

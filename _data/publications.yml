@@ -10,6 +10,15 @@
   highlight: "KL alone roughly doubles the dark-energy figure of merit of standard weak lensing for the HLWAS Medium Tier; the planned roll angles are near-optimal for KL."
   tags: [Roman, forecast, multiprobe]
 
+- title: "Cosmic shear with one component and its application to future radio surveys"
+  authors: "Y.-H. Huang, E. Krause, T. Eifler, G. Bernstein, J. Xu, E. Huff, Pranjal R. S."
+  year: 2025
+  journal: "Phys. Rev. D"
+  arxiv: "2510.18011"
+  doi: "10.1103/bfx7-4fsw"
+  highlight: "A streamlined one-component version of KL that needs less observing effort; forecasts for radio (HI) surveys and deeper spectroscopic surveys."
+  tags: [radio, forecast]
+
 - title: "Kinematic Lensing Inference II: Cluster Lensing with O(1) Galaxies"
   authors: "Pranjal R. S., E. Huff, E. Krause, T. Eifler, S. Everett, et al."
   year: 2025
@@ -36,9 +45,9 @@
   tags: [systematics]
 
 - title: "Kinematic Lensing Inference I: Characterizing Shape Noise with Simulated Analyses"
-  authors: "Pranjal R. S., E. Krause, E. Huff, T. Eifler, et al."
+  authors: "Pranjal R. S., E. Krause, H.-J. Huang, E. Huff, J. Xu, T. Eifler, S. Everett"
   year: 2023
-  journal: "MNRAS"
+  journal: "MNRAS 524, 3324"
   arxiv: "2209.11811"
   doi: "10.1093/mnras/stad2014"
   highlight: "Forward-modeling inference pipeline; KL shape noise of ~0.02–0.04, an order of magnitude below standard weak lensing."

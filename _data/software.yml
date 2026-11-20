@@ -1,50 +1,56 @@
-# Software listed on the Software page. Repos live in the KinematicLensing org.
-# status: active | archived
+# Software shown on the Software page.
+#
+# `pipelines` are featured with a longer description.
+# `repos` are code repositories in the KinematicLensing GitHub organization.
+# Use `repo: owner/name` for GitHub links, or `url:` for any other link.
 
-- name: kl_roman_pipe
-  repo: KinematicLensing/kl_roman_pipe
-  description: "Assembles KL modeling and simulation tools for archival measurements and future Roman pipeline production."
-  language: Python
-  status: active
+pipelines:
+  - name: ROCKING
+    lead: Fabian Hervas-Peters
+    url: https://arxiv.org/abs/2609.23148
+    url_label: Described in arXiv:2609.23148 (Sec. 6.7)
+    summary: "Kinematic lensing shear inference for Roman slitless spectroscopy."
+    details:
+      - "Targets Roman’s Hα emission-line galaxy sample from the High Latitude Wide Area Survey."
+      - "Recovers the shear on each galaxy by jointly forward-modeling the grism (dispersed) image and the direct image, using 2D emission-line maps to constrain the rotation velocity field."
+      - "Produces simulated Roman HLWAS grism images of galaxies with resolved kinematics."
+      - "Validated on oversampled grizli dispersed images that are passed through romanisim to add realistic noise and detector effects."
+      - "Two roll angles 180° apart give the best kinematic information while limiting contamination from neighboring sources."
 
-- name: kl-tools
-  repo: KinematicLensing/kl-tools
-  description: "Kinematic Lensing toolkit (fork of sweverett/kl-tools)."
-  language: Jupyter Notebook
-  status: active
+  - name: RomanXYZ
+    url: https://romanxyz.org/pipeline.html
+    url_label: romanxyz.org
+    repo: ydzhuastro/RomanXYZ
+    summary: "End-to-end Python pipeline for Roman WFI grism data, from count-rate images to calibrated spectra, redshifts, emission-line maps and kinematic stamps."
+    details:
+      - "Five stages: imaging (sky and 1/f removal, astrometry, source catalog), traces, contamination modeling, 2D and 1D spectral extraction, and science products."
+      - "Runs as a single command, romanxyz reduce; each step writes a status table and can be rerun on its own."
+      - "Produces native-pixel kinematic stamps with variance, contamination and continuum models that work with any kinematics code, including KL fits."
+      - "Includes a simulated set of sheared rotating disks for kinematic lensing, fit directly in detector pixels across two roll angles."
+      - "Early development (v0.1), tested on simulations; an MIT-licensed open-source release is planned."
 
-- name: kl-nn
-  repo: KinematicLensing/kl-nn
-  description: "Neural-network tools for accelerating KL analyses."
-  language: Jupyter Notebook
-  status: active
+repos:
+  - name: kl_roman_pipe
+    repo: KinematicLensing/kl_roman_pipe
+    description: "Assembles KL modeling and simulation tools for archival measurements and future Roman pipeline production."
+    language: Python
 
-- name: JWST_KL_workflow
-  repo: KinematicLensing/JWST_KL_workflow
-  description: "Documented workflow for KL measurements on JWST grism and imaging data."
-  language: ""
-  status: active
+  - name: kl-tools
+    repo: KinematicLensing/kl-tools
+    description: "Kinematic Lensing toolkit (fork of sweverett/kl-tools)."
+    language: Jupyter Notebook
 
-- name: gal_decomp_paper
-  repo: KinematicLensing/gal_decomp_paper
-  description: "Code for a dynamical galaxy decomposition paper (fork of McWilliamsCenter/gal_decomp_paper)."
-  language: Jupyter Notebook
-  status: active
+  - name: kl-nn
+    repo: KinematicLensing/kl-nn
+    description: "Neural-network tools for accelerating KL analyses."
+    language: Jupyter Notebook
 
-- name: TNGcube
-  repo: KinematicLensing/TNGcube
-  description: "Mock spectrum generator from IllustrisTNG simulations."
-  language: Jupyter Notebook
-  status: archived
+  - name: JWST_KL_workflow
+    repo: KinematicLensing/JWST_KL_workflow
+    description: "Documented workflow for KL measurements on JWST grism and imaging data."
+    language: ""
 
-- name: BinnedFit
-  repo: KinematicLensing/BinnedFit
-  description: "Kinematic lensing modeling."
-  language: Jupyter Notebook
-  status: archived
-
-- name: notes
-  repo: KinematicLensing/notes
-  description: "Working notes."
-  language: Jupyter Notebook
-  status: archived
+  - name: gal_decomp_paper
+    repo: KinematicLensing/gal_decomp_paper
+    description: "Code for a dynamical galaxy decomposition paper (fork of McWilliamsCenter/gal_decomp_paper)."
+    language: Jupyter Notebook

@@ -1,10 +1,7 @@
-# Team roster. Seeded from public author lists of the team's KL papers.
-# Please review: confirm roles and affiliations, add missing members,
-# and optionally add a photo (put the image in assets/img/team/ and set
-# `photo: /assets/img/team/filename.jpg`) and a personal `website`.
-#
+# Team roster.
 # Fields: name, role, affiliation, website (optional), photo (optional), group
 # group is one of: pi, faculty, researchers, students, collaborators
+# Photos: put a square image in assets/img/team/ and set `photo: /assets/img/team/filename.jpg`
 
 - name: Elisabeth Krause
   role: Principal Investigator
@@ -22,31 +19,46 @@
   group: faculty
 
 - name: Spencer Everett
-  role: Team member
-  affiliation: ""
-  group: researchers
-
-- name: Jiachuan Xu
-  role: Team member
-  affiliation: University of Arizona
+  role: Researcher
+  affiliation: Caltech
   group: researchers
 
 - name: Pranjal R. S.
-  role: Team member
+  role: Researcher
+  affiliation: NASA Jet Propulsion Laboratory
+  group: researchers
+
+- name: Jiachuan Xu
+  role: Researcher
+  affiliation: University of Arizona
+  group: researchers
+
+- name: Fabian Hervas-Peters
+  role: Researcher
+  affiliation: University of Arizona
+  group: researchers
+
+- name: Yan Xiang Lai
+  role: Researcher
   affiliation: University of Arizona
   group: researchers
 
 - name: Yu-Hsiu Huang
-  role: Team member
+  role: Graduate Student
   affiliation: University of Arizona
   group: students
 
-- name: Fabian Hervas-Peters
-  role: Team member
-  affiliation: ""
-  group: researchers
+- name: Jiyun Di
+  role: Graduate Student
+  affiliation: University of Arizona
+  group: students
 
-- name: Yan Xiang Lai
-  role: Team member
-  affiliation: ""
+- name: Emily Macbeth
+  role: Graduate Student
+  affiliation: University of Arizona
+  group: students
+
+- name: Lauren Willett
+  role: Graduate Student
+  affiliation: University of Arizona
   group: students

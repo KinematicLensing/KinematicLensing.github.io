@@ -1,9 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <defs>
     <linearGradient id="v" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#4f8dff"/>
-      <stop offset=".5" stop-color="#f1ece4"/>
-      <stop offset="1" stop-color="#ff5a4e"/>
+      <stop offset="0" stop-color="#2a3cff"/>
+      <stop offset=".3" stop-color="#16c1e8"/>
+      <stop offset=".45" stop-color="#2fd37a"/>
+      <stop offset=".55" stop-color="#ffd23d"/>
+      <stop offset=".7" stop-color="#ff962c"/>
+      <stop offset="1" stop-color="#d81e3a"/>
     </linearGradient>
   </defs>
   <rect width="64" height="64" rx="14" fill="#0c1324"/>

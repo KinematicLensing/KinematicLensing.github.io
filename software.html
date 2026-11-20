@@ -3,31 +3,40 @@ layout: default
 title: Software
 slug: software
 kicker: Code
-lede: Tools for kinematic lensing modeling, simulation and inference, developed in the KinematicLensing GitHub organization.
+lede: Pipelines and tools for kinematic lensing with Roman, from grism data reduction to per-galaxy shear inference.
 permalink: /software/
 ---
 <section class="section">
   <div class="wrap">
-    <h2>Active projects</h2>
-    <div class="cards">
-      {% for r in site.data.software %}{% if r.status == "active" %}
-      <a class="card" href="https://github.com/{{ r.repo }}">
-        <div class="repo-head"><h3>{{ r.name }}</h3><span class="badge active">active</span></div>
-        <p>{{ r.description }}</p>
-        <div class="repo-meta">{% if r.language != "" %}<span class="lang">{{ r.language }}</span>{% endif %}<span>{{ r.repo }}</span></div>
-      </a>
-      {% endif %}{% endfor %}
+    <h2>Pipelines</h2>
+    <div class="pipelines">
+      {% for p in site.data.software.pipelines %}
+      <article class="pipeline">
+        <div class="pipeline-head">
+          <h3>{{ p.name }}</h3>
+          {% if p.lead %}<span class="pipeline-lead">Lead: {{ p.lead }}</span>{% endif %}
+        </div>
+        <p class="pipeline-summary">{{ p.summary }}</p>
+        <ul>
+          {% for d in p.details %}<li>{{ d }}</li>{% endfor %}
+        </ul>
+        <div class="pub-links">
+          {% if p.url %}<a href="{{ p.url }}">{{ p.url_label | default: p.url }}</a>{% endif %}
+          {% if p.repo %}<a href="https://github.com/{{ p.repo }}">GitHub: {{ p.repo }}</a>{% endif %}
+        </div>
+      </article>
+      {% endfor %}
     </div>
 
-    <h2 style="margin-top:3rem">Archived</h2>
+    <h2 style="margin-top:3.5rem">Repositories</h2>
     <div class="cards">
-      {% for r in site.data.software %}{% if r.status == "archived" %}
-      <a class="card" href="https://github.com/{{ r.repo }}">
-        <div class="repo-head"><h3>{{ r.name }}</h3><span class="badge">archived</span></div>
+      {% for r in site.data.software.repos %}
+      <a class="card" href="{% if r.repo %}https://github.com/{{ r.repo }}{% else %}{{ r.url }}{% endif %}">
+        <div class="repo-head"><h3>{{ r.name }}</h3></div>
         <p>{{ r.description }}</p>
         <div class="repo-meta">{% if r.language != "" %}<span class="lang">{{ r.language }}</span>{% endif %}</div>
       </a>
-      {% endif %}{% endfor %}
+      {% endfor %}
     </div>
 
     <div class="cta" style="margin-top:3rem">
